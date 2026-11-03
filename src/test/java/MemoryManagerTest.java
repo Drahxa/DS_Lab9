@@ -1,7 +1,7 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
-public class MemoryManager{
+public class MemoryManagerTest{
 
     MemoryManager storage = new MemoryManager(100);
 
@@ -16,8 +16,8 @@ public class MemoryManager{
         assertEquals(10, richard.getLength());
 
         // 0 - 10   to   11 - 31
-        MemoryAllocatioin notRichard = storare.requestMemory(20, "NotRichard");
-        assertEquals("NotRichard", richard.getOwner());
+        MemoryAllocation notRichard = storage.requestMemory(20, "NotRichard");
+        assertEquals("NotRichard", notRichard.getOwner());
         assertEquals(11, notRichard.getPosition());
         assertEquals(31, notRichard.getLength());
 
