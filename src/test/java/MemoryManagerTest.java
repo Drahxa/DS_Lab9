@@ -18,8 +18,8 @@ public class MemoryManagerTest{
         // 0 - 10   to   11 - 31
         MemoryAllocation notRichard = storage.requestMemory(20, "NotRichard");
         assertEquals("NotRichard", notRichard.getOwner());
-        assertEquals(11, notRichard.getPosition());
-        assertEquals(31, notRichard.getLength());
+        assertEquals(10, notRichard.getPosition());
+        assertEquals(20, notRichard.getLength());
 
         storage.returnMemory(richard);
 

@@ -41,7 +41,13 @@ public class MemoryAllocation
 	return len;
     }
     
-
+    public MemoryAllocation getPrev(){
+    return prev;
+    }
+    
+    public MemoryAllocation getNext(){
+    return next;
+    }
 
     public String toString()
     {
